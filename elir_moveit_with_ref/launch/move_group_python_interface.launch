@@ -1,0 +1,6 @@
+<launch>
+
+  <node name="move_group_python_interface" pkg="elir_moveit_with_ref" type="move_group_python_interface.py" respawn="false" output="screen">
+  </node>
+
+</launch>
