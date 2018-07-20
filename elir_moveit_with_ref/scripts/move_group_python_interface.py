@@ -145,6 +145,8 @@ class MoveGroupPythonIntefaceTutorial(object):
     # reason not to.
     group = self.group
 
+    # Returns if this group has end-effector
+    print("has end effector?:", group.has_end_effector_link())
     ## BEGIN_SUB_TUTORIAL plan_to_pose
     ##
     ## Planning to a Pose Goal
