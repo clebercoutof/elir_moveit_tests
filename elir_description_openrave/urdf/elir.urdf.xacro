@@ -361,19 +361,10 @@
 
 
   <!-- This link represents the front traction body unit that contains front traction body, claw f1 support and claw f2 support -->
-  <link name="eef_ref"/>
-  <joint name="eef_ref_tracao_f" type="fixed">
+  <joint name="eef_joint" type="fixed">
     <parent link="tracao_f"/>
-    <child link="eef_ref"/>
-    <origin rpy="0 0.0 0" xyz="0.233 0.0 0.0"/>
-    <limit effort="1000.0" lower="-1.0" upper="2.18" velocity="0.5"/>
-    <axis xyz="0 1 0"/>
-  </joint>
-
-  <joint name="joint_eef" type="fixed">
-    <parent link="eef_ref"/>
     <child link="eef_tracao_f"/>
-    <origin rpy="0 0.0 0" xyz="0.0 0.0 0.0"/>
+    <origin rpy="0 0.0 0" xyz="0.233 0.0 0.0"/>
     <limit effort="1000.0" lower="-1.0" upper="2.18" velocity="0.5"/>
     <axis xyz="0 1 0"/>
   </joint>
