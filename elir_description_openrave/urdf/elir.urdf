@@ -242,7 +242,7 @@
   <link name="base_link">
     <visual name="base_body">
       <geometry>
-        <box size="0.05 0.05 0.05"/>
+        <box size="0.005 0.005 0.005"/>
       </geometry>
       <material name="silver"/>
     </visual>
@@ -917,103 +917,6 @@
       <inertia ixx="4.94e-05" ixy="0.0" ixz="0.0" iyy="6.11e-05" iyz="0.0" izz="4.94e-05"/>
     </inertial>
   </link>
-  <link name="zed_left_camera">
-    <visual>
-      <origin rpy="0 1.57 0" xyz="0 0 0"/>
-      <geometry>
-        <cylinder length=".031" radius="0.007"/>
-      </geometry>
-      <material name="dark_grey">
-        <color rgba="0.1 0.1 0.1 1"/>
-      </material>
-    </visual>
-  </link>
-  <link name="zed_center">
-    <visual>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <geometry>
-        <mesh filename="package://elir_description_openrave/meshes/ZED.stl"/>
-      </geometry>
-      <material name="light_grey">
-        <color rgba="0.8 0.8 0.8 0.8"/>
-      </material>
-    </visual>
-  </link>
-  <link name="zed_right_camera">
-    <visual>
-      <origin rpy="0 1.57 0" xyz="0 0 0"/>
-      <geometry>
-        <cylinder length=".031" radius="0.007"/>
-      </geometry>
-      <material name="dark_grey">
-        <color rgba="0.1 0.1 0.1 1"/>
-      </material>
-    </visual>
-  </link>
-  <link name="zed_depth_camera"/>
-  <joint name="zed_left_camera_joint" type="fixed">
-    <parent link="zed_center"/>
-    <child link="zed_left_camera"/>
-    <origin rpy="0 0 0" xyz="0 0.06 0"/>
-  </joint>
-  <joint name="zed_depth_camera_joint" type="fixed">
-    <parent link="zed_left_camera"/>
-    <child link="zed_depth_camera"/>
-    <origin rpy="-1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0"/>
-  </joint>
-  <joint name="zed_right_camera_joint" type="fixed">
-    <parent link="zed_center"/>
-    <child link="zed_right_camera"/>
-    <origin rpy="0 0 0" xyz="0 -0.06 0"/>
-  </joint>
-  <link name="flir_camera">
-    <visual>
-      <origin rpy="0 1.570796 0" xyz="0 0 0"/>
-      <geometry>
-        <mesh filename="package://elir_description_openrave/meshes/LeptonBreakoutBoardWithLepton3.stl" scale="0.001 0.001 0.001"/>
-      </geometry>
-      <material name="light_grey">
-        <color rgba="0.8 0.8 0.8 0.8"/>
-      </material>
-    </visual>
-  </link>
-  <joint name="zed_camera_joint" type="fixed">
-    <parent link="box_link"/>
-    <child link="zed_center"/>
-    <origin rpy="0 0 0" xyz="0.17 0.0 -0.1"/>
-  </joint>
-  <joint name="flir_camera_joint" type="fixed">
-    <parent link="box_link"/>
-    <child link="flir_camera"/>
-    <origin rpy="0 0 0" xyz="0.17 0.0 -0.05"/>
-  </joint>
-  <!-- Sonares -->
-  <link name="ground_sonar">
-    <visual>
-      <geometry>
-        <mesh filename="package://elir_description_openrave/meshes/groundsonar.dae"/>
-      </geometry>
-      <origin rpy="0 -1.570796 0"/>
-    </visual>
-    <collision>
-      <geometry>
-        <mesh filename="package://elir_description_openrave/meshes/groundsonar.dae"/>
-      </geometry>
-      <origin rpy="0 -1.570796 0"/>
-    </collision>
-    <inertial>
-      <mass value="1e-5"/>
-      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
-    </inertial>
-  </link>
-  <gazebo reference="ground_sonar">
-    <material>Gazebo/Gold</material>
-  </gazebo>
-  <joint name="ground_sonar_base" type="fixed">
-    <parent link="box_link"/>
-    <child link="ground_sonar"/>
-    <origin rpy="0 1.570796 0" xyz="0 0 -0.155"/>
-  </joint>
   <!-- ROS Control-->
   <!-- Juntas -->
   <transmission name="tran_joint_1f">
