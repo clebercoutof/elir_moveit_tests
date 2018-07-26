@@ -276,9 +276,9 @@
     <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of elir -->
     <visual name="central_claw_base">
       <geometry>
-        <mesh filename="package://elir_description_openrave/meshes/dxl_mx106.dae"/>
+        <box size="0.051 0.045 0.036 "/>
       </geometry>
-      <material name="black"/>
+      <material name="silver"/>
       <origin rpy="0 0 0" xyz="0.0 0.0722 0.3554"/>
     </visual>
     <!-- This collision is for the base_body -->
@@ -298,7 +298,7 @@
     <!-- This collision is for the central_claw_base -->
     <collision name="central_claw_base">
       <geometry>
-        <mesh filename="package://elir_description_openrave/meshes/dxl_mx106.dae"/>
+        <box size="0.051 0.045 0.036 "/>
       </geometry>
       <origin rpy="0 0 0" xyz="0.0 0.0722 0.3554"/>
     </collision>

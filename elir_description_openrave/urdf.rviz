@@ -63,7 +63,27 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        box_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        eef_tracao_f:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         eixo_tracao_ap:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        eixo_tracao_b1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        eixo_tracao_b2:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -78,22 +98,17 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        eixo_tracao_t1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        eixo_tracao_t2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        flir_camera:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         garra_ap:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        garra_tracao_b1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        garra_tracao_b2:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -108,17 +123,7 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        garra_tracao_t1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        garra_tracao_t2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        ground_sonar:
+        link1_b:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -128,41 +133,12 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        link1_t:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        obstacle_sonar_up:
+        tracao_b:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
         tracao_f:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        tracao_t:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        zed_center:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        zed_depth_camera:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        zed_left_camera:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        zed_right_camera:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -227,10 +203,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.265397966
+      Pitch: 0.540397823
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.790399194
+      Yaw: 0.265394926
     Saved: ~
 Window Geometry:
   Displays:
