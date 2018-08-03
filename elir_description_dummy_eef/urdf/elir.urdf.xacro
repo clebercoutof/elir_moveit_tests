@@ -355,17 +355,17 @@
 
 
   <!-- This link represents the front traction body unit that contains front traction body, claw f1 support and claw f2 support -->
-  <link name="eef_ref"/>
+  <link name="f_eef_ref"/>
   <joint name="eef_ref_tracao_f" type="fixed">
     <parent link="tracao_f"/>
-    <child link="eef_ref"/>
+    <child link="f_eef_ref"/>
     <origin rpy="0 0.0 0" xyz="0.233 0.0 0.0"/>
     <limit effort="1000.0" lower="-1.0" upper="2.18" velocity="0.5"/>
     <axis xyz="0 1 0"/>
   </joint>
 
-  <joint name="joint_eef" type="fixed">
-    <parent link="eef_ref"/>
+  <joint name="joint_eef_f" type="fixed">
+    <parent link="f_eef_ref"/>
     <child link="eef_tracao_f"/>
     <origin rpy="0 0.0 0" xyz="0.0 0.0 0.0"/>
     <limit effort="1000.0" lower="-1.0" upper="2.18" velocity="0.5"/>
@@ -446,6 +446,34 @@
     </inertial>
   </link>
 
+    <!-- This link represents the front traction body unit that contains front traction body, claw f1 support and claw f2 support -->
+  <link name="b_eef_ref"/>
+  <joint name="eef_ref_tracao_b" type="fixed">
+    <parent link="tracao_b"/>
+    <child link="b_eef_ref"/>
+    <origin rpy="0 0.0 0" xyz="0.233 0.0 0.0"/>
+    <limit effort="1000.0" lower="-1.0" upper="2.18" velocity="0.5"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <joint name="joint_eef_b" type="fixed">
+    <parent link="b_eef_ref"/>
+    <child link="eef_tracao_b"/>
+    <origin rpy="0 0.0 0" xyz="0.0 0.0 0.0"/>
+    <limit effort="1000.0" lower="-1.0" upper="2.18" velocity="0.5"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <link name="eef_tracao_b">
+    <!-- This visual represents the front traction body -->
+    <visual name = 'eef_box'>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="black"/>
+      <origin rpy="0 0 0" xyz="${0.01/2} 0.0 0.0"/>
+    </visual>
+  </link>
   <!-- This joint binds the front traction body unit (represented by the link tracao_f) and the front f1 claw unit (represented by the link garra_tracao_f1). It can rotate with the z axis fixed, it has an upper limit of 3.14 (360 degrees) and lower limit of -3.14 (-360 degrees) -->
   <joint name="joint_garra_tracao_f1" type="revolute">
     <parent link="tracao_f"/>
